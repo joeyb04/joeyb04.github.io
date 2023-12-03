@@ -4,7 +4,7 @@ Welcome to my home page! My name is Joseph Brett and I am a student at [Cal Stat
 
 ## Computer Science Projects
 
-My GitHub page is http://github.com/joeyb04.
+My GitHub page is [here](https://github.com/joeyb04).
 
 ### CPSC 120
 
