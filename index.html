@@ -123,7 +123,7 @@
             position: fixed;
             background-color: var(--accent-color);
             color: white;
-            padding: 15px 25px;
+            padding: 15px 10px; /* Reduced side padding slightly to fit text */
             border-radius: 10px;
             font-weight: bold;
             text-decoration: none;
@@ -131,7 +131,7 @@
             z-index: 999;
             transition: top 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             top: -200px;
-            width: 180px;
+            width: 250px; /* Increased width to fit the email */
             text-align: center;
         }
 
@@ -147,14 +147,15 @@
         .hanging-sign::before { left: 15px; }
         .hanging-sign::after { right: 15px; }
 
+        /* Positioning for the signs */
         #email-sign {
-            right: 260px;
+            right: 320px; /* Moved left to avoid touching */
             transition-delay: 0s;
         }
 
         #phone-sign {
             right: 30px;
-            background-color: #0891b2;
+            /* Removed background-color override so it matches email */
             transition-delay: 0.2s;
         }
 
@@ -162,11 +163,11 @@
             top: 100px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             #contact-trigger { top: 10px; right: 10px; padding: 8px 15px; font-size: 0.9rem; }
-            .hanging-sign { width: 140px; font-size: 0.8rem; padding: 10px; }
+            .hanging-sign { width: 200px; font-size: 0.8rem; padding: 10px; }
             #phone-sign { right: 10px; }
-            #email-sign { right: 170px; }
+            #email-sign { right: 220px; }
         }
 
     </style>
@@ -175,8 +176,8 @@
 
 <button id="contact-trigger" onclick="document.body.classList.toggle('show-contact')">Contact Me</button>
 
-<a href="mailto:email@gmail.com" id="email-sign" class="hanging-sign">email@gmail.com</a>
-<a href="tel:5551234567" id="phone-sign" class="hanging-sign">(555) 123-4567</a>
+<a href="mailto:josephbrett790@gmail.com" id="email-sign" class="hanging-sign">josephbrett790@gmail.com</a>
+<a href="tel:7147221192" id="phone-sign" class="hanging-sign">714-722-1192</a>
 
 <div class="container">
     
