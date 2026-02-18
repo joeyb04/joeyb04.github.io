@@ -26,7 +26,8 @@
 
         :root {
             --accent-color: #06b6d4; 
-            --card-bg: rgba(45, 45, 45, 0.85);
+            /* UPDATED: Card background now has a hint of purple */
+            --card-bg: rgba(70, 30, 90, 0.85);
         }
 
         .container {
@@ -83,20 +84,28 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.1);
             backdrop-filter: blur(5px);
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        .card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+        .card:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--accent-color);
+            background-color: rgba(90, 40, 110, 0.9); /* Lighter purple on hover */
+        }
 
-        .tech-stack {
-            font-size: 0.9rem;
-            color: #a0aec0;
-            margin-top: 10px;
-            font-family: monospace;
+        /* Project Title Link Style */
+        .card h3 a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255,255,255,0.5);
+        }
+        .card h3 a:hover {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
         }
 
         .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -223,9 +232,8 @@
         <div class="project-grid">
             
             <div class="card">
-                <h3>Python Keylogger</h3>
-                <p>Created a desktop application for a Computer Engineering group project to analyze keystroke data for security research.</p>
-                <div class="tech-stack">Stack: Python, Desktop App</div>
+                <h3><a href="https://github.com/josephbrett04/Huffman-File-Compressor" target="_blank">Huffman File Compressor 🔗</a></h3>
+                <p>A high-performance file compression tool utilizing the Huffman coding algorithms. Features lossless compression, bitwise serialization, and binary tree optimization.</p>
             </div>
 
         </div>
